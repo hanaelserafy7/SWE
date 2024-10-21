@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Activity Management</title>
+  <style>
+    /* General Styles */
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #D9D9D9; /* Darker grey */
+  color: #333;
+}
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    /* Header */
+    header {
+      background-color: #1A2130;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #FFFFFF;
+    }
+
+    header .logo {
+      font-size: 24px;
+    }
+
+    header nav a {
+      color: #FFFFFF;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    header .profile {
+      display: flex;
+      align-items: center;
+    }
+
+    header .profile img {
+      border-radius: 50%;
+      margin-left: 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('students-activity.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+    }
+
+    .hero p {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+
+    .hero button {
+      background-color: #5A72A0;
+      color: #FFFFFF;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #83B4FF;
+    }
+
+    /* Activities Section */
+    .activities {
+      padding: 40px;
+      background-color: #F0F0F0;
+    }
+
+    .activities h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .activity-card {
+      background-color: #1A2130;
+      color: #FFFFFF;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .activity-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .activity-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .activity-card p {
+      margin-bottom: 20px;
+    }
+
+    .activity-card button {
+      background-color: #5A72A0;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #FFFFFF;
+      transition: background-color 0.3s;
+    }
+
+    .activity-card button:hover {
+      background-color: #83B4FF;
+    }
+
+    /* Events Calendar */
+    .calendar-section {
+      padding: 40px;
+    }
+
+    .calendar-section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .calendar {
+      background-color: #1A2130;
+      color: #FFFFFF;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .event-list {
+      background-color: #3E4A5B;
+      color: #FFFFFF;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .event-list h3 {
+      margin-bottom: 10px;
+    }
+
+    /* Resources Section */
+    .resources {
+      padding: 40px;
+      background-color: #F0F0F0;
+    }
+
+    .resources h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .resource-items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .resource-item {
+      background-color: #1A2130;
+      color: #FFFFFF;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .resource-item a {
+      color: #83B4FF;
+      text-decoration: none;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background-color: #1A2130;
+      padding: 40px;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      margin-bottom: 40px;
+    }
+
+    .testimonial {
+      background-color: #3E4A5B;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1A2130;
+      padding: 20px;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    footer a {
+      color: #83B4FF;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .activity-grid, .resource-items {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Student Activity Management</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Activities</a>
+      <a href="#">Events</a>
+      <a href="#">Resources</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="profile">
+      <span>User</span>
+      <img src="profile.jpg" alt="Profile Picture" width="40" height="40">
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Engage, Participate, Excel</h1>
+    <p>Join the best extracurricular activities for growth</p>
+    <button onclick="scrollToActivities()">Join an Activity</button>
+  </div>
+
+  <!-- Activities Overview -->
+  <section class="activities" id="activities">
+    <h2>Upcoming Activities</h2>
+    <div class="activity-grid">
+      <div class="activity-card">
+        <img src="art-workshop.jpg" alt="Art Workshop">
+        <h3>Art Workshop</h3>
+        <p>Nov 1st, 2:00 PM</p>
+        <button>Register</button>
+      </div>
+      <div class="activity-card">
+        <img src="robotics.jpg" alt="Robotics Meetup">
+        <h3>Robotics Meetup</h3>
+        <p>Nov 2nd, 3:00 PM</p>
+        <button>Register</button>
+      </div>
+      <div class="activity-card">
+        <img src="cooking-class.jpg" alt="Cooking Class">
+        <h3>Cooking Class</h3>
+        <p>Nov 3rd, 5:00 PM</p>
+        <button>Register</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Calendar -->
+  <section class="calendar-section">
+    <h2>Events Calendar</h2>
+    <div class="calendar">
+      <h3>October 2024</h3>
+      <!-- Here you can add a JavaScript-powered calendar -->
+    </div>
+    <div class="event-list">
+      <h3>Upcoming Events</h3>
+      <p>Music Festival - Nov 5th, 4:00 PM</p>
+      <p>Photography Contest - Nov 7th, 1:00 PM</p>
+      <p>Chess Tournament - Nov 10th, 10:00 AM</p>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section class="resources">
+    <h2>Resources</h2>
+    <div class="resource-items">
+      <div class="resource-item">
+        <h3>Student Handbook</h3>
+        <a href="#">Download PDF</a>
+      </div>
+      <div class="resource-item">
+        <h3>Event Planning Guide</h3>
+        <a href="#">Download PDF</a>
+      </div>
+      <div class="resource-item">
+        <h3>Volunteer Guide</h3>
+        <a href="#">Download PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+   
